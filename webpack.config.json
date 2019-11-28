@@ -1,0 +1,46 @@
+{
+  "devtool": "source-map",
+  "entry": "./src/index.ts",
+  "output": {
+    "path": "$pdist",
+    "publicPath": "/dist/",
+    "filename": "index.js"
+  },
+  "resolve": {
+    "extensions": [
+      "html",
+      "css",
+      ".js",
+      ".json",
+      ".ts"
+    ]
+  },
+  "module": {
+    "rules": [
+      {
+        "test": "$r\\.js",
+        "exclude": "$r(node_modules|bower_components)",
+        "use": {
+          "loader": "babel-loader",
+          "options": {
+            "presets": [
+              "@babel/preset-env"
+            ]
+          }
+        }
+      },
+      {
+        "test": "$r\\.ts",
+        "exclude": "$r(node_modules|bower_components)",
+        "use": {
+          "loader": "babel-loader",
+          "options": {
+            "presets": [
+              "@babel/preset-typescript"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

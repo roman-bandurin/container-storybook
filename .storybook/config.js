@@ -1,3 +1,3 @@
 import { configure } from "@storybook/html";
 
-configure(require.context("../src", true, /\.stories\.js$/), module);
+configure(require.context("../src/components", true, /\.s\.(js|tsx?)$/), module);

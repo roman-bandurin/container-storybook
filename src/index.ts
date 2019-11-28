@@ -1,4 +1,12 @@
-import Button from "../src/Button";
-const button = new Button();
+import Button from './src/components/Button';
+import App from './src/app/App';
 
-document.getElementById("app").innerHTML = button.render();
+const mainButton = new Button('mainButton');
+const app = new App(mainButton);
+
+if (document !== null) {
+  const el = document.getElementById('app');
+  if (el !== null) {
+    el.innerHTML = app.render();
+  }
+}
