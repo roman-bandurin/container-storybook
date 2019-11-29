@@ -23,15 +23,29 @@
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
-  "rules": {
-    "import/no-unresolved": [
-      2,
-      {
-        "caseSensitive": false
-      }
+  "ignorePatterns": [
+    "webpack.config.js",
+    "node_modules/"
+  ],
+  "settings": {
+    "import/resolver": "webpack",
+    "import/extensions": [
+      ".js",
+      ".ts"
     ]
   },
-  "settings": {
-    "import/resolver": "webpack"
-  }
+  "rules": {},
+  "overrides": [
+    {
+      "files": [
+        "*.d.ts"
+      ],
+      "rules": {
+        "semi": [
+          2,
+          "never"
+        ]
+      }
+    }
+  ]
 }

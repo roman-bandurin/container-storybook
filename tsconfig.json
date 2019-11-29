@@ -1,7 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "rootDir": "",
     "target": "esnext",
     "moduleResolution": "node",
     "allowJs": true,
@@ -13,8 +11,5 @@
       "dom",
       "es6"
     ]
-  },
-  "include": [
-    "src"
-  ]
+  }
 }

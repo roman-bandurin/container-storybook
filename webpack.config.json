@@ -2,7 +2,7 @@
   "devtool": "source-map",
   "entry": "./src/index.ts",
   "output": {
-    "path": "$pdist",
+    "path": "$path$dist",
     "publicPath": "/dist/",
     "filename": "index.js"
   },
@@ -18,8 +18,8 @@
   "module": {
     "rules": [
       {
-        "test": "$r\\.js",
-        "exclude": "$r(node_modules|bower_components)",
+        "test": "$regex$\\.js",
+        "exclude": "$regex$(node_modules|bower_components)",
         "use": {
           "loader": "babel-loader",
           "options": {
@@ -30,8 +30,8 @@
         }
       },
       {
-        "test": "$r\\.ts",
-        "exclude": "$r(node_modules|bower_components)",
+        "test": "$regex$\\.ts",
+        "exclude": "$regex$(node_modules|bower_components)",
         "use": {
           "loader": "babel-loader",
           "options": {

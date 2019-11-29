@@ -4,12 +4,24 @@
   "description": "My webpack project",
   "main": "src/index.ts",
   "scripts": {
-    "start": "webpack-dev-server --mode development --inline --hot",
-    "build": "webpack --mode production",
-    "tscheck": "tsc",
-    "eslint:lint": "eslint lib/**",
-    "eslint:fix": "eslint src/**/*.ts --fix",
-    "checkpath": "node -e \"var path = require('path'); console.log(path.resolve('/', './index.html'));\""
+    "start": "npm run webpack:serve",
+    "build": "npm run webpack:build",
+    "eslint:lint": "eslint 'src/**'",
+    "eslint:fix": "eslint 'src/**' --fix",
+    "ts:check": "tsc",
+    "webpack:build": "webpack --mode production",
+    "webpack:serve": "webpack-dev-server --mode development --inline --hot",
+    "node:checkpath": "node -e \"var path = require('path'); console.log(path.resolve('/', './index.html'));\""
+  },
+  "scripts-info": {
+    "start": "Entry point Start",
+    "build": "Entry point Build",
+    "webpack:serve": "Serve via webpack",
+    "webpack:build": "Build via webpack",
+    "eslint:lint": "Lint via EsLint",
+    "eslint:fix": "Fix via EsLint",
+    "ts:check": "Check via TypeScript",
+    "node:checkpath": "Check path via NodeJs"
   },
   "dependencies": {},
   "devDependencies": {
@@ -27,6 +39,7 @@
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "eslint": "^6.7.1",
     "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-import-resolver-webpack": "^0.11.1",
     "eslint-plugin-import": "^2.18.2",
     "html-webpack-plugin": "^3.2.0",
     "terser-webpack-plugin": "^2.2.1",
@@ -35,5 +48,22 @@
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
   },
-  "keywords": []
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roman-bandurin/container-storybook.git"
+  },
+  "keywords": [
+    "node",
+    "webpack",
+    "babel",
+    "typescript",
+    "eslint",
+    "storybook"
+  ],
+  "author": "roman-bandurin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roman-bandurin/container-storybook/issues"
+  },
+  "homepage": "https://github.com/roman-bandurin/container-storybook#readme"
 }
