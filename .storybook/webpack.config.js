@@ -1,12 +1,11 @@
-module.exports = ({ config }) => {
+module.exports = ({ config, mode }) => {
   config.module.rules.push({
-    test: /\.(ts|tsx)$/,
-    use: [
-      {
-        loader: require.resolve("awesome-typescript-loader")
-      }
-    ]
+    test: /\.ts$/,
+    loader: require.resolve('babel-loader'),
+    options: {
+      presets: ["@babel/preset-typescript"],
+    },
   });
-  config.resolve.extensions.push(".ts", ".tsx");
+  config.resolve.extensions.push('.ts');
   return config;
 };

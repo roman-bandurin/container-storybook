@@ -1,10 +1,10 @@
-{
+module.exports = api => { console.log(api.env()); return {
   "presets": [
-    "@babel/preset-env",
-    "@babel/preset-typescript"
+    "@babel/preset-typescript",
+    "@babel/preset-env"
   ],
   "plugins": [
     "@babel/proposal-class-properties",
     "@babel/proposal-object-rest-spread"
   ]
-}
+}};

@@ -25,7 +25,11 @@
   },
   "ignorePatterns": [
     "webpack.config.js",
-    "node_modules/"
+    "**/*.t.ts",
+    "jest.config.js",
+    "node_modules/",
+    ".storybook/",
+    "dist/"
   ],
   "settings": {
     "import/resolver": "webpack",

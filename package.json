@@ -6,12 +6,17 @@
   "scripts": {
     "start": "npm run webpack:serve",
     "build": "npm run webpack:build",
+    "test": "npm run jest:test",
     "eslint:lint": "eslint 'src/**'",
     "eslint:fix": "eslint 'src/**' --fix",
     "ts:check": "tsc",
     "webpack:build": "webpack --mode production",
     "webpack:serve": "webpack-dev-server --mode development --inline --hot",
-    "node:checkpath": "node -e \"var path = require('path'); console.log(path.resolve('/', './index.html'));\""
+    "node:checkpath": "node -e \"var path = require('path'); console.log(path.resolve('/', './index.html'));\"",
+    "jest:test": "jest --no-cache",
+    "jest:coverage": "jest --coverage",
+    "storybook:serve": "start-storybook --port 6060",
+    "storybook:build": "build-storybook --config-dir .storybook --output-dir storybook-static"
   },
   "scripts-info": {
     "start": "Entry point Start",
@@ -31,6 +36,8 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
     "@babel/preset-typescript": "^7.7.4",
+    "@storybook/html": "^5.2.6",
+    "@types/jest": "^24.0.23",
     "@types/node": "^12.12.14",
     "@typescript-eslint/eslint-plugin": "^2.9.0",
     "@typescript-eslint/parser": "^2.9.0",
@@ -42,6 +49,7 @@
     "eslint-import-resolver-webpack": "^0.11.1",
     "eslint-plugin-import": "^2.18.2",
     "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.9.0",
     "terser-webpack-plugin": "^2.2.1",
     "typescript": "^3.7.2",
     "webpack": "^4.41.2",
@@ -58,6 +66,7 @@
     "babel",
     "typescript",
     "eslint",
+    "jest",
     "storybook"
   ],
   "author": "roman-bandurin",

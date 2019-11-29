@@ -8,11 +8,11 @@
   },
   "resolve": {
     "extensions": [
-      "html",
-      "css",
+      ".html",
+      ".css",
+      ".ts",
       ".js",
-      ".json",
-      ".ts"
+      ".json"
     ]
   },
   "module": {
@@ -42,5 +42,7 @@
         }
       }
     ]
-  }
+  },
+  "plugins": [
+  ]
 }
