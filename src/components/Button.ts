@@ -1,4 +1,4 @@
-import IComponent from './IComponent.d';
+import IComponent from 'Src/components/IComponent.d';
 
 export default class Button implements IComponent {
   private title: string

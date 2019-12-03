@@ -1,0 +1,9 @@
+{
+  "clearMocks": true,
+  "moduleNameMapper": {
+    "^Root(.*)$": "<rootDir>$1",
+    "^Src(.*)$": "<rootDir>/src$1"
+  },
+  "coverageDirectory": "coverage",
+  "testRegex": "^.*?\\.t\\.ts$"
+}

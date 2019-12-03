@@ -1,5 +1,5 @@
-import IComponent from '../components/IComponent.d';
-import Button from '../components/Button';
+import IComponent from 'Src/components/IComponent.d';
+import Button from 'Src/components/Button';
 
 export default class App implements IComponent {
   mainButton: Button

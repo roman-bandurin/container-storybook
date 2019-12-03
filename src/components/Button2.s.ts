@@ -1,4 +1,4 @@
-import Button from './Button';
+import Button from 'Src/components/Button';
 
 const button1 = new Button('button 2');
 

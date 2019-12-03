@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
     "target": "es5",
     "module": "commonjs",
     "moduleResolution": "node",
@@ -9,9 +10,25 @@
     "strict": true,
     "isolatedModules": true,
     "esModuleInterop": true,
+    "paths": {
+      "Root/*": [
+        "./*"
+      ],
+      "Src/*": [
+        "src/*"
+      ]
+    },
     "lib": [
       "dom",
       "es6"
     ]
-  }
+  },
+  "include": [
+    "src/index.ts",
+    "**/*.s.ts",
+    "**/*.t.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
 }

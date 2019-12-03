@@ -1,5 +1,5 @@
-import Button from './components/Button';
-import App from './app/App';
+import Button from 'Src/components/Button';
+import App from 'Src/app/App';
 
 const mainButton = new Button('mainButton');
 const app = new App(mainButton);

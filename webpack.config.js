@@ -1,4 +1,4 @@
-const path = require('path'),
+const path = require('path'), //"$regex$(?<!\\.[st])\\.ts"
   json = JSON.stringify(require('./webpack.config.json')),
   rf = (v) => (/\$(.*?)\$(.*?)$/.exec(v)),
   $ = {

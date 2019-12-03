@@ -1,6 +1,10 @@
-storybook-static
+.codesandbox
+.vscode
+__screenshots__
+coverage
 dist
 node_modules
 package-lock.json
+stats.json
+storybook-static
 yarn.lock
-.codesandbox

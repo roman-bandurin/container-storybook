@@ -1,4 +1,5 @@
 {
+  "mode": "development",
   "devtool": "source-map",
   "entry": "./src/index.ts",
   "output": {
@@ -7,6 +8,10 @@
     "filename": "index.js"
   },
   "resolve": {
+    "alias": {
+      "Root": "$path$",
+      "Src": "$path$src"
+    },
     "extensions": [
       ".html",
       ".css",
@@ -43,6 +48,5 @@
       }
     ]
   },
-  "plugins": [
-  ]
+  "plugins": []
 }

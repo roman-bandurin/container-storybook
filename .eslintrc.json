@@ -1,9 +1,7 @@
 {
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./tsconfig.json",
-    "ecmaVersion": 2018,
-    "sourceType": "module"
+    "project": "./tsconfig.json"
   },
   "plugins": [
     "@typescript-eslint"
@@ -25,8 +23,6 @@
   },
   "ignorePatterns": [
     "webpack.config.js",
-    "**/*.t.ts",
-    "jest.config.js",
     "node_modules/",
     ".storybook/",
     "dist/"
@@ -45,10 +41,27 @@
         "*.d.ts"
       ],
       "rules": {
-        "semi": [
-          2,
-          "never"
-        ]
+        "semi": 0
+      }
+    },
+    {
+      "files": [
+        "*.s.ts"
+      ],
+      "rules": {
+        "import/no-unresolved": 0,
+        "import/no-extraneous-dependencies": 0,
+        "@typescript-eslint/ban-ts-ignore": 0
+      }
+    },
+    {
+      "files": [
+        "*.t.ts"
+      ],
+      "rules": {
+        "import/no-unresolved": 0,
+        "import/no-extraneous-dependencies": 0,
+        "no-undef": 0
       }
     }
   ]
